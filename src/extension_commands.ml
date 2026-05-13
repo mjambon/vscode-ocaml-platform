@@ -1572,6 +1572,10 @@ let _ocamlgrep_quickpick_test =
         (Window.createQuickPick (module QuickPickItem) ())
         ~title:"QuickPick test"
         ~items
+        ~activeItems:[]
+        ~selectedItems:[]
+        ~busy:false
+        ~enabled:true
         ~ignoreFocusOut:true
         ()
     in
@@ -1649,6 +1653,10 @@ module Ocamlgrep = struct
           (Window.createQuickPick (module QuickPickItem) ())
           ~title:"OCamlgrep Results"
           ~items:(List.map ~f:fst indexed)
+          ~activeItems:[]
+          ~selectedItems:[]
+          ~busy:false
+          ~enabled:true
           ~ignoreFocusOut:true
           ()
       in
