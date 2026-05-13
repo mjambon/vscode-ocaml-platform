@@ -1627,7 +1627,7 @@ module Ocamlgrep = struct
           (Window.createQuickPick (module QuickPickItem) ())
           ~title:"OCamlgrep Results"
           ~items:(List.map ~f:fst indexed)
-          ~ignoreFocusOut:false
+          ~ignoreFocusOut:true
           ()
       in
       let _on_accept =
